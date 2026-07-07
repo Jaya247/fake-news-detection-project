@@ -362,7 +362,7 @@
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
             
-            fetch('http://localhost:8000/login', {
+            fetch('https://fake-news-detection-project-xd98.onrender.com/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, password })
@@ -389,7 +389,7 @@
             const email = document.getElementById('regEmail').value;
             const password = document.getElementById('regPassword').value;
             
-            fetch('http://localhost:8000/register', {
+            fetch('https://fake-news-detection-project-xd98.onrender.com/register', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ name, email, password })
@@ -439,7 +439,7 @@
             console.log('Sending verification request for:', claim);
             
             // Send verification request
-            fetch('http://localhost:8000/verify', {
+            fetch('https://fake-news-detection-project-xd98.onrender.com/verify', {
                 method: 'POST',
                 headers: { 
                     'Content-Type': 'application/json',
@@ -489,7 +489,7 @@
                         <ul class="list-disc ml-6 mt-2 text-sm">
                             <li>Make sure the Python backend server is running on port 8000</li>
                             <li>Run: <code class="bg-gray-800 px-2 py-1 rounded">python main.py</code></li>
-                            <li>Check if you see "Server running on http://localhost:8000" in the terminal</li>
+                            <li>Check if you see "Server running on https://fake-news-detection-project-xd98.onrender.com" in the terminal</li>
                             <li>Verify your NewsAPI key is valid in your .env file</li>
                         </ul>
                         <br>
@@ -634,7 +634,7 @@
 
         // Check server status on load
         function checkServerStatus() {
-            fetch('http://localhost:8000/health')
+            fetch('https://fake-news-detection-project-xd98.onrender.com/health')
                 .then(response => response.json())
                 .then(data => {
                     console.log('Server status:', data);
